@@ -231,6 +231,7 @@
               3.栅栏函数在执行时是独占的
               4.dispatch_barrier_async == dispatch_async  这两个是等同的
     */
+    
     2）延迟执行（延迟·控制在哪个线程执行）
           dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSLog(@"---%@",[NSThread currentThread]);
@@ -270,6 +271,10 @@
         dispatch_group_t group = dispatch_group_create();
         //队列组中的任务执行完毕之后，执行该函数
         dispatch_group_notify(dispatch_group_t group,dispatch_queue_t queue,dispatch_block_t block);//这个方法本身也是异步的
+
+    /*
+    方便管理一个组内的操作
+    */
 
     6）进入群组和离开群组
         dispatch_group_enter(group);//执行该函数后，后面异步执行的block会被gruop监听
