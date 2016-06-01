@@ -1,2 +1,0 @@
-# Thread_Day01
-
