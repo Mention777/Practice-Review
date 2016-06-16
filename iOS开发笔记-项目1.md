@@ -68,6 +68,8 @@
 
 >6.通过修改leftBarButtonItem和rightBarButtonItem可以更改导航条上左右两部分显示的东西(**导航栏的左右侧类型是UIBarButtonItem,而titleView类型是UIView**)
 
+>7.导航条(navigationBar)只能通过导航控制器获取
+
 4.UITabBarController
 
 >1.UITabBarController切换的原理:点击下面的按钮,会先把当前控制器的View从TabBarController存放⼦子控件View的View当中移除(只是移除view,子控制器还在数组当中,没有被移除),并把对应的子控制器的view添加上去
