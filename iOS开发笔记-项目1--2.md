@@ -115,6 +115,8 @@ UITabBarItem * item = [UITabBarItem appearance];
 
 >>原因:普通的按钮,设置一个按钮宽度,那么点击范围就是按钮宽度,但是把按钮包装成UIBarButtonItem,就会使点击范围扩大
 
+>>解决方式,创建一个UIView,将按钮添加进去,直接将View添加进UIBarButtonItem内
+
 >>P.S子控件超过父控件,则不能点击
 
 >2.导航条的设置,由导航控制器的栈顶控制器决定
